@@ -14,6 +14,8 @@
 // Repeat process for every layer around same location if not in same line
 
 int slicecapacity = 0;
+int slicetracker = 0;
+int layertracker = 0;
 
 typedef struct infocache {
     int slice;
@@ -22,5 +24,18 @@ typedef struct infocache {
 } ic;
 
 void assign(ic *pointinfo){
+    if(slicecapacity >= MAX_POINTS){
+        slicecapacity = 0;
+        slicetracker++;
+    }
+
+    if(slicetracker >= 625){
+        slicetracker = 0;
+        layertracker++;
+    }
+
+    pointinfo -> slice = slicetracker;
+    pointinfo -> layer = layertracker;
+    
     return;
 }
