@@ -1,3 +1,11 @@
 bin
 *.class
 out/
+Java/P0-Person201/
+Java/P1-NBody/
+Java/P2-Markov-Part-1/
+Java/P3-markov-part2/
+Java/P5-Autocomplete/
+Java/P6-Percolation/
+Java/P7-Huffman/
+Java/p4-dnalink/
